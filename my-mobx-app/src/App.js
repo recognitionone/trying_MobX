@@ -20,6 +20,8 @@ class App extends Component {
 
   onSubmit = (event) => {
     event.preventDefault();
+    console.log('Hello this.state.term ' + this.state.term);
+    console.log('Hello this.state.items ' + this.state.items);
     this.setState({
       term: '',
       items: [...this.state.items, this.state.term]
@@ -30,7 +32,10 @@ class App extends Component {
     return (
       <div>
         <form className="App" onSubmit={this.onSubmit}>
-          <input value={this.state.term} onChange={this.onChange} />
+          <input 
+            placeholder="Task"
+            value={this.state.term} 
+            onChange={this.onChange} />
           <button>Submit</button>
         </form>
       
