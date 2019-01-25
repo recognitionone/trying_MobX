@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 class Clicker extends React.Component {
 	constructor(props) {
 		super(props);
@@ -22,9 +21,13 @@ class Clicker extends React.Component {
 	render() {
 		return(
 			<div>
+			{/*
+				<TimerView appState={new AppState()} />
+				*/}
 				<div>Count: {this.state.count}</div>
 				<div><button onClick={this.handleInc}> More </button></div>
 				<div><button onClick={this.handleDec}> Less </button></div>
+
 			</div>
 			)
 		}
