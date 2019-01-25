@@ -6,7 +6,8 @@ import './App.css';
 // import TodoBox from './TodoBox';
 // import Timer from './Timer';
 // import Monster from './Monster';
-import Clicker from './Clicker';
+// import Clicker from './Clicker';
+import TodoMob from './TodoMob';
 
 
 class App extends Component {
@@ -23,8 +24,10 @@ class App extends Component {
         <TodoBox />
         <h1>This is my timer</h1>
         <Timer />
-        */}
         <Clicker />
+        */}
+
+        <TodoMob />
       </div>
     );
   }
