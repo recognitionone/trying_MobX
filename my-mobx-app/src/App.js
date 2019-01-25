@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import List from './List';
-
+import TodoApp from './TodoApp';
+import TodoBox from './TodoBox';
+import Timer from './Timer';
+import Monster from './Monster';
 
 
 class App extends Component {
@@ -15,7 +18,8 @@ class App extends Component {
   }
 
   onChange = (event) => {
-    this.setState({ term: event.target.value })
+    console.log('onChange ' + event.target.value);
+    this.setState({ term: event.target.value });
   }
 
   onSubmit = (event) => {
@@ -38,9 +42,17 @@ class App extends Component {
             onChange={this.onChange} />
           <button>Submit</button>
         </form>
-      
+        {/*}
+        <h1>This is my list</h1>
         <List items={this.state.items} />
-      
+        <h1>This is TodoApp from the main site</h1>
+        <TodoApp />
+        <h1>This is TodoBox from Codepen</h1>
+        <TodoBox />
+        <h1>This is my timer</h1>
+        <Timer />
+        */}
+        <Monster />
       </div>
     );
   }
