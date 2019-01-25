@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "react-dom";
 import { observable, action } from "mobx";
 import { observer } from "mobx-react";
-import DevTools from "mobx-react-devtools";
+// import DevTools from "mobx-react-devtools";
 
 class AppState {
   @observable timer = 0;
@@ -23,16 +23,17 @@ const TimerView = observer(({ appState }) => (
   <button onClick={appState.reset}>Seconds passed: {appState.timer}</button>
 ));
 
-render(
-  <div>
-    <TimerView appState={new AppState()} />
-    <DevTools />
-  </div>,
-  document.getElementById("root")
-);
+class TodoMob extends React.Component {
+  render() {
+    return (
+      <div>
+        <TimerView appState={new AppState()} />
+      </div>
+      )
+  }
+}
 
-
-
+export default TodoMob;
 
 
 
